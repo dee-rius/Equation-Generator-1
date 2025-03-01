@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=devicemeta-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Random Equation Generator</title>
+  <link rel="stylesheet" type="text/css" href="random-equation-generator-style.css">
+</head>
+<body>
+  <main>
+    <header>
+    <h1 style="font-style: underlined;">Equation Generator</h1>
+    </header>
+    <fieldset>
+    <legend>Select Difficulty</legend>
+    <label><input type="radio" name="difficulty" value="easiest">Easiest</label>
+    <label><input type="radio" name="difficulty" value="medium">Medium</label>
+    <label><input type="radio" name="difficulty" value="hard">Hard</label>
+  </fieldset>
+  <section>
+  <p>Click button to generate a random equation</p>
+  <button onclick="getRandomEquation()">Generate</button>
+  <p>Your equation is: <p id="equation-text">...</p></p>
+  </section>
+  <section>
+    <textarea rows="10" cols="40" id="workSpace" placeholder="Type your workings here (optional)"></textarea>
+  </section>
+  <section>
+      <p>Please type your answer here (rounded to 2dp)</p>
+      <input id="user-answer" type="text" value="0">
+      <button onclick="checkUserAnswer()">Submit Answer</button>
+      <p>You are <strong id="feedback-text">...</strong></p>
+    </fieldset>
+  </section>
+  </main>
+  <script src="random-equation-generator-script.js"></script>
+  </body>
+</html>
